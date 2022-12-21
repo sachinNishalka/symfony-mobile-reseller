@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Post;
+use     App\Entity\Post;
 use App\Entity\User;
 use App\Form\DataViewType;
 use App\Form\PostType;
