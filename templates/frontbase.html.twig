@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('./styles/frontpage/index.css') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect"
+                                                                     href="https://fonts.gstatic.com"
+                                                                     crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>onlinekade.shop</title>
+</head>
+<body>
+
+<section id="header">
+    <!-- Need to Change -->
+    <a href="#"><img src="{{ asset('./styles/frontpage/img/logo.png') }}" class="logo" alt="Logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="{{ path('market') }}">Market <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            <li><a href="{{ path('app_login') }}">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            <li><a href="contact-us.html">Contact <i class="fa fa-phone" aria-hidden="true"></i></a></li>
+            <li><a href="{{ path('aboutus') }}">About <i class="fa fa-address-card" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+{% block body %}{% endblock %}
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="img/logo.png" alt="">
+        <h4>Contact</h4>
+        <p><strong> Address:</strong> NSBM,Pitipana Rd, Homagama,Sri Lanka</p>
+        <p><strong> Phone:</strong> +94 766611223</p>
+        <p><strong> Hours:</strong> 10:00 - 15:00,Mon - Fri</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">My Watchlist</a>
+        <a href="#">Help</a>
+    </div>
+    <div class="col install">
+        <h4>Install App (Coming Soon) </h4>
+        <p>From Apple Store or Play Store</p>
+        <div class=app.jpg"row">
+            <img src="{{ asset('./styles/frontpage/img/pay/app.jpg') }}" alt="">
+            <img src="{{ asset('./styles/frontpage/img/pay/play.jpg') }}" alt="">
+        </div>
+        <p>Secured Payment Gateways (Coming Soon) </p>
+
+    </div>
+    <div class="copyright">
+        <p>©2022,Product of <b>CoDeX</b> </p>
+    </div>
+</footer>
+
+<script src="{{ asset('/styles/frontpage/index.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</body>
+</html>
