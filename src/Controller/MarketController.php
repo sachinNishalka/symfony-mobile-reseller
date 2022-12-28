@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,8 +15,10 @@ class MarketController extends AbstractController
      * */
     public function index(): Response
     {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository(Post::class)->findAll();
         return $this->render('market/index.html.twig', [
-            'controller_name' => 'MarketController',
+            'posts'=>$posts,
         ]);
     }
 }
