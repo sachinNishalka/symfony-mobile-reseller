@@ -1,5 +1,39 @@
+{% extends 'frontbase.html.twig' %}
+
+{% block body %}
+
+{#        {{ post.model }}#}
+        <section id="product1" class="section-p1">
+            <h2>{{ category.name }} Ads</h2>
+
+            <div class="pro-container">
+                <!-- 1 -->
+                {% for post in posts %}
+                    <div class="pro">
+                        <img src="{{ asset('uploads/' ~ post.image1 )}}" alt="">
+                        <div class="des">
+
+                            <h5>{{ post.model }}</h5>
+
+                            <h4>Price : {{ post.price }}</h4>
+                            <h4>City : {{ post.city }}</h4>
+                            <h5>Contact : {{ post.ContactNumber }}</h5>
+                        </div>
+                        <a href="" class="cart"><i class="fa fa-star" aria-hidden="true"></i></a>
+                    </div>
+                {% endfor %}
+
+                <!-- 2 -->
+
+                <!-- 8 -->
+
+            </div>
+
+        </section>
 
 
-{% for post in posts %}
-    {{ post.model }}
-{% endfor %}
+
+
+
+
+{% endblock body %}

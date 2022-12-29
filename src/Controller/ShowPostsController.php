@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,7 +20,8 @@ class ShowPostsController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository(Post::class)->findBy(['category'=>$category_id]);
-      dump($posts);
-        return $this->render('show_posts/index.html.twig',['posts'=>$posts]);
+        $category = $em->getRepository(Category::class)->findBy(['id'=>$category_id]);
+//      dump($category);
+        return $this->render('show_posts/index.html.twig',['posts'=>$posts, 'category'=>$category[0]]);
     }
 }
