@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\UserRepository;
+use App\Repository\VisitorCounterRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,9 +16,15 @@ class MainController extends AbstractController
      * @Route("/", name="home")
 
      */
-    public function index()
+    public function index(VisitorCounterRepository $visitorCounterRepository)
     {
 //        return new Response("<h1>This is the home page</h1>");
+//        $count = $visitorCounterRepository ->visitorCount();
+//        $visior_ip = '192.168.8.229';
+//        dump($visior_ip);
+//        $result = $visitorCounterRepository ->serachip($visior_ip);
+//        dump($count[0][1]);
+//        dump($result);
        return $this->render('/frontpage.html.twig');
     }
 
