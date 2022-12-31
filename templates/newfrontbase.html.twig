@@ -24,7 +24,7 @@
 
 <section id="header">
     <!-- Need to Change -->
-    <a href="#"><img src="{{ asset('./styles/newfront/img/logo99.png') }}" class="logo" alt="Logo" style="height: 90px; width: 170px; "></a>
+    <a href="{{ path('home') }}"><img src="{{ asset('./styles/newfront/img/logo99.png') }}" class="logo" alt="Logo" style="height: 90px; width: 170px; "></a>
     <div>
         <ul id="navbar">
             <li><a class="{% if app.request.attributes.get('_route') starts with 'home' %}active{% endif %}" href="{{ path('home') }}">Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
