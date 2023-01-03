@@ -1,201 +1,376 @@
 *{
-    margin: 0;
-    padding: 0;
+    font-family: sans-serif;
     box-sizing: border-box;
 }
 
-html{
-    font-size: 10px;
-    font-family: "poppins", sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-}
-
-section{
-    padding: 10rem ;
-    background-color: #fff;
-}
-
-.heading{
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    letter-spacing: 3px;
-    margin-right: -3px;
-    margin-bottom: 5rem;
-    text-align: center;
-    color: #333;
-    position: relative;
-}
-
-.heading::after{
-    content: "";
-    width: 10rem;
-    height: .8rem;
-    background-color: #45e19f;
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2rem;
-}
-
-.card-wrapper{
-    display: flex;
+/* Navbar */
+#header{
+    display: flex; 
     align-items: center;
-    align-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-top: 0px
 }
-
-.card{
-    width: 36rem;
-    background-color: #ebeef8;
+#navbar{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0;
-    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
-
-}
-
-.card .card-img{
-    width: 100%;
-    height: 26rem;
-    object-fit: cover;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
-}
-
-.profile-img{
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: -11rem;
-    z-index: 999;
-    border: 1rem solid #ebeef8;
-}
-
-.card h1{
-    font-size: 2.4rem;
-    color: #333;
-    margin: 1.5rem 0;
-}
-
-.job-title{
-    color: #777;
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-
-.about{
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    text-align: center;
-    color: #333;
-}
-
-.card .btn{
-    padding: 1rem 2.4rem;
-    background-color: #445ae3;
-    border-radius: 2rem;
-    margin: 1rem 0;
-    text-transform: uppercase;
-    color: #eee;
-    font-size: 1.4rem;
-    transition: all .5s;
-}
-
-.card .btn:hover{
-    transform: translateY(-2px);
-    box-shadow: .5rem .5rem 2rem rgba(0,0,0,.2);
-}
-.card .btn:active{
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.social-media{
-    width: 100%;
     list-style: none;
+}
+#navbar li{
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 750;
+    color: #1e1e1e;
+    transition: .3s ease;
+}
+#navbar li a:hover,#navbar li a.active{
+    color: #088178;
+
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    transition: .3s ease;
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px ;
+    left: 20px;
+}
+
+#mobile{
+   display: none;
+   align-items: center;
+}#close{
+   display: none;
+}
+
+.body1{
+   
+    height: 85vh;
+    overflow: hidden;
+    background: #fff;
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 0;
-    margin-top: 1.5rem;
-    border-top: 1px solid rgba(0,0,0,.1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-media i{
-    font-size: 3rem;
-    transition: color .5s;
+.header{
+    color: #545454;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 625px;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-shadow: 5px 5px 5px rgba(93, 93, 93, 0.25);
 }
 
-.fa-facebook-square{
-    color: #3b5999;
-}
-.fa-twitter-square{
-    color: #55acee;
-}
-.fa-instagram{
-    color: #e6683c;
-}
-.fa-whatsapp-square{
-    color: #128c7e;
+.maincontainer{
+    position: relative;
+    width: 90%;
+    height: 60%;
+    perspective: 1000px;
 }
 
-.fa-facebook-square:hover,
-.fa-twitter-square:hover,
-.fa-instagram:hover,
-.fa-whatsapp-square:hover{
-    color: #45e19f;
+.thecard{
+   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.5s;
 }
 
+.maincontainer:hover > .thecard{
+    cursor: pointer;
+    transform: rotateX(180deg);
+}
 
-@media screen and (min-width: 700px){
-    .card-wrapper{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+.thefront{
+    border-radius: 15px;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(13.jpg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 0 20px 2px rgba(50, 50, 50, 0.25);
+}
+.title{
+    text-transform: uppercase;
+    font-size: 30px;
+    widows: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.theback{
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, rgba(0, 145, 31, 0.223), rgba(0, 131, 178, 0.273));
+    backdrop-filter: blur(10px);
+    transform: rotateX(180deg);
+    box-shadow: 0 0 20px 2px rgba(50, 50, 50, 0.714);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.para{
+    margin-top: 25px;
+    line-height: 1.5rem;
+    font-weight: bold;
+    gap: 7px;
+    padding: 35px;
+    font-size: 18px;
+    color: #009b77;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(84, 84, 84);
+    border-radius: 10px;
+    border: 1px solid rgb(56, 56, 56);
+    margin-bottom: 65px;
+    padding: 12px 34px;
+    font-weight: bold;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid lime;
+    background: lime;
+    transition: 2s;
+}
+
+.desc{
+    font-weight: bold;
+    position: absolute;
+    margin-top: 600px;
+    padding: 40px;
+    font-size: 17px;
+    font-style: italic;
+    color: rgb(123, 123, 123);
+}
+/* Animated Text */
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+ 
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* @media(max-width:700px){
+    .title{
+        font-size: 20px;
+    }
+    .hero-btn{
+        font-size: 10px;
+    }
+    .para{
+        font-size: 10px;
+    }
+    .desc{
+        font-size: 10px;
+    }
+    .header{
+        font-size: 35px;
+    }
+} */
+ /* Tablet Responsive */
+
+ @media (max-width:799px){
+    .section-p1{
+       padding: 40px 40px;
+    }
+    #navbar{
+       display:flex ;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: flex-start;
+       position: fixed;
+       top: 0;
+       right: -300px;
+       height: 100vh;
+       width: 300px;
+       background-color: #e3e6f3;
+       box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+       padding: 80px 0 0 10px;
+       transition: 0.3s;
+ 
+    }
+    #navbar.active{
+       right: 0px;
+    }
+    #navbar li{
+       margin-bottom: 25px;
+ 
+    }
+    #mobile{
+       display: flex;
+       align-items: center;
+    }
+    #mobile i{
+       color: #1a1a1a;
+       font-size: 24px;
+       padding-left: 20px;
+    }
+    #close{
+       display: initial;
+       position: absolute;
+       top: 30px;
+       left: 30px;
+       color: #222;
+       font-size: 24px;
+    }
+   
+    .title{
+        font-size: 20px;
+    }
+    .hero-btn{
+        font-size: 12px;
+    }
+    .para{
+        font-size: 12px;
+        line-height: 1.25;
+    }
+    .desc{
+        font-size: 8px;
+    }
+    .header{
+        font-size: 35px;
+    }
+   
+  }
+  /* Mobile */
+  @media (max-width:477px){
+ 
+    .section-p1{
+       padding: 20px;
+    }
+    .section-p1{
+        padding: 40px 40px;
+     }
+     #navbar{
+        display:flex ;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+  
+     }
+     #navbar.active{
+        right: 0px;
+     }
+     #navbar li{
+        margin-bottom: 25px;
+  
+     }
+     #mobile{
+        display: flex;
         align-items: center;
-    }
-
-    .card{
-        margin: 2rem;
-        transition: transform .5s;
-    }
-
-    @keyframes fadeIn{
-        from{
-            opacity: 0;
-        }
-        to{
-            opacity: 1;
-        }
-    }
-
-    .card:nth-child(1){
-        animation: fadeIn .5s .5s backwards;
-    }
-    .card:nth-child(2){
-        animation: fadeIn .5s 1s backwards;
-    }
-    .card:nth-child(3){
-        animation: fadeIn .5s 1.5s backwards;
-    }
-    .card:nth-child(4){
-        animation: fadeIn .5s 2s backwards;
-    }
-    .card:nth-child(5){
-        animation: fadeIn .5s 2.5s backwards;
-    }
-
-    .card:hover{
-        transform: scale(1.05);
-    }
-
+     }
+     #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+     }
+     #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+     }
     
+    #header{
+       padding: 10px 30px;
+    }
+    #hero{
+       padding: 0 20px;
+       background-position: 55%;
+    }
+    h2{
+       font-size: 28px;
+    }
+    h1{
+       font-size: 30px;
+       font-weight: 600;
+ 
+  } 
+   .title{
+        font-size: 15px;
+    }
+    .hero-btn{
+        font-size: 6px;
+    }
+    
+    .desc{
+        font-size: 4px;
+      
+    }
+    .header{
+        font-size: 35px;
+    }
+   
 }

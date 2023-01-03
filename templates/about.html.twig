@@ -1,108 +1,36 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="{{ asset('styles/about/style.css') }}">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
-</head>
-<body>
-<section>
-    <div class="container">
-        <h1 class="heading">Meet The Team</h1>
-        <div class="card-wrapper">
+{% extends 'newfrontbase.html.twig' %}
 
-            <div class="card">
-                <img src="{{ ('./styles/about/banner2.jpg') }}" alt="card-backgroud" class="card-img">
-                <img src="{{ ('./styles/about/1.jpg') }}" alt="profile-image" class="profile-img">
-                <h1>Isuru</h1>
-                <p class="job-title">UI/UX Developer</p>
-                <p class="about">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facilis numquam voluptatum ul
-                    lam ratione esse, assumenda dolorem excepturi fuga, quaerat, nam atque eligendi libero officiis prae
-                    sentium at totam consequuntur rerum.</p>
-                <a href="#" class="btn">Contact</a>
-                <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                </ul>
-            </div>
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('./styles/about/style.css') }}">
+    <div class="body1">
 
-            <div class="card">
-                <img src="{{ ('./styles/about/banner2.jpg') }}" alt="card-backgroud" class="card-img">
-                <img src="{{ ('./styles/about/2.jpg') }}" alt="profile-image" class="profile-img">
-                <h1>Akash</h1>
-                <p class="job-title">Lead Developer</p>
-                <p class="about">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facilis numquam voluptatum ul
-                    lam ratione esse, assumenda dolorem excepturi fuga, quaerat, nam atque eligendi libero officiis prae
-                    sentium at totam consequuntur rerum.</p>
-                <a href="#" class="btn">Contact</a>
-                <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <img src="{{ ('./styles/about/banner2.jpg') }}" alt="card-backgroud" class="card-img">
-                <img src="{{ ('./styles/about/3.jpg') }}" alt="profile-image" class="profile-img">
-                <h1>Yasiru</h1>
-                <p class="job-title">Web Developer</p>
-                <p class="about">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facilis numquam voluptatum ul
-                    lam ratione esse, assumenda dolorem excepturi fuga, quaerat, nam atque eligendi libero officiis prae
-                    sentium at totam consequuntur rerum.</p>
-                <a href="#" class="btn">Contact</a>
-                <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <img src="{{ ('./styles/about/banner2.jpg') }}" alt="card-backgroud" class="card-img">
-                <img src="{{ ('./styles/about/4.jpg') }}" alt="profile-image" class="profile-img">
-                <h1>Vinuka</h1>
-                <p class="job-title">Designer</p>
-                <p class="about">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facilis numquam voluptatum ul
-                    lam ratione esse, assumenda dolorem excepturi fuga, quaerat, nam atque eligendi libero officiis prae
-                    sentium at totam consequuntur rerum.</p>
-                <a href="#" class="btn">Contact</a>
-                <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <img src="{{ ('./styles/about/banner2.jpg') }}" alt="card-backgroud" class="card-img">
-                <img src="{{ ('./styles/about/5.png') }}" alt="profile-image" class="profile-img">
-                <h1>Sachin</h1>
-                <p class="job-title">Back-end Developer</p>
-                <p class="about">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam facilis numquam voluptatum ul
-                    lam ratione esse, assumenda dolorem excepturi fuga, quaerat, nam atque eligendi libero officiis prae
-                    sentium at totam consequuntur rerum.</p>
-                <a href="#" class="btn">Contact</a>
-                <ul class="social-media">
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-whatsapp-square"></i></a></li>
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="animate-charcter">Our Organization</h3>
+                </div>
             </div>
         </div>
+        <br></br>
+        <div class="maincontainer">
+            <div class="thecard">
+                <div class="thefront">
+                    <h1 class="title">Sri Lanka's Best Institute for Higher Education</h1>
+                </div>
+                <div class="theback">
+                    <p class="para">The Green University Town is a landmark project by the National School of Business Management (NSBM),
+                        one of the nation’s premier degree schools.
+
+                        The University features state-of-the-art lecture hall facilities, laboratories, libraries, modern auditoriums.
+
+                        The NSBM University complex offers not only classroom facilities but also hostels, free study areas, cinemas, expansive walking and lounge areas, swimming pools, modern gymnasiums and an “entrepreneurship” business unit, making it a complete education and live-in facility bringing the university experience of 21st century to our doorstep.
+                        The university town spans over 26 acres of land, and will eventually accommodate over 30,000 local and international undergraduates.
+                        NSBM Green University Town has earned the distinction of being South Asia’s first green university, paving the way for more green buildings in the education sector in the region. The building has achieved the BCA Green Mark Gold rating for sustainable buildings</p>
+                    <a href="https://www.nsbm.ac.lk/" class="hero-btn">Click Here To Know More</a>
+                </div>
+            </div>
+        </div>
+
     </div>
-</section>
-</body>
+    <script src="{{ asset('./style/about/index.js') }}"></script>
+{% endblock %}
