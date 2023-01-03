@@ -27,6 +27,11 @@ class Post
     private $model;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $SellerName;
+
+    /**
      * @ORM\Column(type="string", length=1000)
      */
     private $description;
@@ -240,6 +245,18 @@ class Post
     public function setImage4(string $image4): self
     {
         $this->image4 = $image4;
+
+        return $this;
+    }
+
+    public function getSellerName(): ?string
+    {
+        return $this->SellerName;
+    }
+
+    public function setSellerName(string $SellerName): self
+    {
+        $this->SellerName = $SellerName;
 
         return $this;
     }

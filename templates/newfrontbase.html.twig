@@ -28,7 +28,7 @@
     <div>
         <ul id="navbar">
             <li><a class="{% if app.request.attributes.get('_route') starts with 'home' %}active{% endif %}" href="{{ path('home') }}">Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a class="{% if app.request.attributes.get('_route') starts with 'market' %}active{% endif %}" href="{{ path('market') }}">Market <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            <li><a class="{% if app.request.attributes.get('_route') starts with 'market' %}active{%elseif app.request.attributes.get('_route') starts with 'view' %}active{% endif %} " href="{{ path('market') }}">Market <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
             <li><a class="{% if app.request.attributes.get('_route') starts with 'app_login' %}active{% endif %}" href="{{ path('app_login') }}">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
 {#            <li><a class="{% if app.request.attributes.get('_route') starts with 'contact-us' %}active{% endif %}" href="contact-us.html">Contact <i class="fa fa-phone" aria-hidden="true"></i></a></li>#}
             <li><a class="{% if app.request.attributes.get('_route') starts with 'aboutus' %}active{% endif %}" href="{{ path('aboutus') }}">About <i class="fa fa-address-card" aria-hidden="true"></i></a></li>

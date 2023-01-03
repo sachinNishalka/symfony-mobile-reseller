@@ -17,6 +17,7 @@ class MarketController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository(Post::class)->findAll();
+
         return $this->render('market/index.html.twig', [
             'posts'=>$posts,
         ]);

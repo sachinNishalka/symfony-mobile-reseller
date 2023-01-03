@@ -20,7 +20,7 @@
                     <h4>City : {{ post.city }}</h4>
                     <h5>Contact : {{ post.ContactNumber }}</h5>
                 </div>
-                <a href="" class="cart"><i class="fa fa-star" aria-hidden="true"></i></a>
+                <a href="{{ path('view_post',{post_id:post.id}) }}" class="cart" style="text-decoration: none">View</a>
             </div>
             {% endfor %}
 

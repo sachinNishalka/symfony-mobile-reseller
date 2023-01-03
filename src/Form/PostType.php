@@ -18,6 +18,7 @@ class PostType extends AbstractType
     {
         $builder
             ->add('model')
+            ->add('SellerName')
             ->add('description',TextareaType::class,[
                 'attr'=>[
                     'maxlength'=>1000

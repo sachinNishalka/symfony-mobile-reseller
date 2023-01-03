@@ -15,6 +15,7 @@ class DataViewType extends AbstractType
     {
         $builder
             ->add('model',TextType::class,['attr'=>['disabled'=>'true']])
+            ->add('SellerName',TextType::class,['attr'=>['disabled'=>'true']])
             ->add('description',TextType::class,['attr'=>['disabled'=>'true']])
             ->add('price',TextType::class,['attr'=>['disabled'=>'true']])
             ->add('city',TextType::class,['attr'=>['disabled'=>'true']])
