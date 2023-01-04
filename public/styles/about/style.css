@@ -362,7 +362,8 @@
         font-size: 15px;
     }
     .hero-btn{
-        font-size: 6px;
+        margin-top: -65px;
+        font-size: 10px;
     }
     
     .desc{
@@ -372,5 +373,12 @@
     .header{
         font-size: 35px;
     }
-   
+      .animate-charcter{
+          font-size: 25px;
+      }
+      .para {
+          margin-top: 65px;
+          font-size: 10px;
+          line-height: 1.25;
+      }
 }
