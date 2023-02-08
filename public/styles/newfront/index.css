@@ -598,7 +598,7 @@ body{
   }
   
  }
- /* Mobile */
+  Mobile
  @media (max-width:477px){
 
    .section-p1{
@@ -632,4 +632,59 @@ body{
   footer .copyright{
    text-align: start;
   }
+
+
+     #mobile i{
+         color: #1a1a1a;
+         font-size: 24px;
+         padding-left: 20px;
+     }
+     #close{
+         display: initial;
+         position: absolute;
+         top: 30px;
+         left: 30px;
+         color: #222;
+         font-size: 24px;
+     }
+
+     #header{
+         padding: 10px 30px;
+     }
+     #hero{
+         padding: 0 20px;
+         background-position: 55%;
+     }
+     h2{
+         font-size: 28px;
+     }
+     h1{
+         font-size: 30px;
+         font-weight: 600;
+
+     }
+     .title{
+         font-size: 15px;
+     }
+     .hero-btn{
+         margin-top: -65px;
+         font-size: 10px;
+     }
+
+     .desc{
+         font-size: 4px;
+
+     }
+     .header{
+         font-size: 35px;
+     }
+
+
+
+
+
  }
+
+
+
+
