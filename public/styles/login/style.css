@@ -17,6 +17,8 @@ input {
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
+  left: -200px;
+  top: -50px;
 }
 
 .forms-container {
