@@ -100,6 +100,10 @@
     cursor: pointer;
     transform: rotateX(180deg);
 }
+.maincontainer:active > .thecard{
+    cursor: pointer;
+    transform: rotateX(180deg);
+}
 
 .thefront{
     border-radius: 15px;
@@ -373,6 +377,7 @@
     .header{
         font-size: 35px;
     }
+
       .animate-charcter{
           font-size: 25px;
       }
@@ -382,3 +387,4 @@
           line-height: 1.25;
       }
 }
+
