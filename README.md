@@ -9,7 +9,8 @@ This a Compleate web application which was buit using following technologies
 
 ## Preview
 
-[screencapture-onlinekade-shop-public-2023-04-03-16_52_18.pdf](https://github.com/sachinNishalka/symfony-mobile-reseller/files/11137744/screencapture-onlinekade-shop-public-2023-04-03-16_52_18.pdf)
+![6JMkP9fkG3](https://user-images.githubusercontent.com/72740598/229504839-1f675d88-d18c-430a-bed3-de1fe90a690a.gif)
+
 
 ## How to setup locally
 
