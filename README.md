@@ -9,7 +9,8 @@ This a Compleate web application which was buit using following technologies
 
 ## Preview
 
-![6JMkP9fkG3](https://user-images.githubusercontent.com/72740598/229504839-1f675d88-d18c-430a-bed3-de1fe90a690a.gif)
+![6JMkP9fkG3](https://user-images.githubusercontent.com/72740598/229505738-c6d9ebc9-b9d4-4041-b96f-b20aa2889963.gif)
+
 
 
 ## How to setup locally
